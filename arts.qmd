@@ -1,0 +1,100 @@
+---
+title: ARTS Open Framework
+author: Sabar Dasgupta
+format: 
+  revealjs:
+    theme: solarized
+    navigation-mode: vertical
+---
+
+## Background (5 min)
+- me
+- ARTS paper
+- communicating scientific knowledge
+
+## Reproducibility
+
+- reproducibility vs replicability
+- regenerate and build off results decades into the future
+
+## Existing methods and tools
+
+# ARTS Open Framework (20 min)
+
+- Licensing
+- Archives
+- Software Version Control
+- Containers 
+- Trusted Timestamping
+- Documentation
+- Configuration and File Structure
+
+## Licensing
+
+- open source great, but not necessary
+- what is most necessary#  is that terms are defined
+
+## Archives
+
+- archives must be trusted, persistent, and ?
+- if they can't well meet these criteria (and pretty much all do not!):
+	- archives must either be decentralized with a well-documented
+- if deposition process is automated, can upload to multiple archives 
+- code ocean case study?
+
+## Software Version Control
+
+- imperative! gives a historical record
+- merge over rebase
+- 
+
+## Containers 
+
+- this is the big idea we're pushing. will come back to this one
+
+## Trusted Timestamping
+
+- interesting in its own right
+- verifiable electronic lab notebook
+
+## Documentation
+
+- arguably the most important part of any depositoin
+- should exist at multiple levels
+- but most important is setup, run, modify
+
+## Configuration and File Structure
+
+- ARTS intentionally not very opinionated
+- only dictates the presense of a single file that should be able to be added to existing archives
+- this file dictates how to interpret the deposition
+
+# Example deposition
+
+## Watch Calibration
+
+- record a watch movement with your laptop
+- write some Python code to analyze it
+- how to share your findings?
+
+## Containers again
+
+## MyBinder
+
+## GCP (?)
+
+# Recommendations (5 min)
+
+## For the HOPE audience
+
+- should I make assumptions about the audience?
+- could maybe skip most of this section
+
+# Applications to other fields (10 min)
+
+- climate databases (NOAA funding, etc.)
+- astrophysics
+- computational biology
+- others?
+
+# Questions (10 min)
