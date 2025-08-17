@@ -204,22 +204,22 @@ Archives should be *accessible, persistent, and trusted*
 
 ## Containerfile
 
-![](figs/containerfile.png)
+![watch-calibration.cf](figs/containerfile.png)
 
 ## Data provenance
 
-![](figs/provenance.png)
+![timestamps_W241130.json](figs/provenance.png)
 
 
 ## README
 
 ::: {.center-xy}
-![](figs/watch_calibration_readme.png){height=550}
+![README.md](figs/watch_calibration_readme.png){height=550}
 :::
 
 ## config.env
 
-![](figs/config.png)
+![config.env](figs/config.png)
 
 
 ## MyBinder
