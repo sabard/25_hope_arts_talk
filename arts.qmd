@@ -24,13 +24,11 @@ format:
 - systems neuroscience
 
 
-## Problem statement
+## Problem statements
 
-- papers as the research output
-- data accessibility
-- reproducibility
-- packaging research code
-- sharing development environments
+- papers are the standard research output
+- data can be found, but can it be used?
+- research development environments are varied
 - rerun analyses decades into the future
 
 
@@ -39,22 +37,22 @@ format:
 ![[https://cgia.org/2025/04/upcoming-removal-of-noaa-datasets/](https://cgia.org/2025/04/upcoming-removal-of-noaa-datasets/)](figs/noaa_removal.png)
 
 
-## Goal
+## Goals
 
-- Communicate scientific knowledge
-- code and data availability
-- provenance (app deployments often do this already; already timestamped)
+- validate and communicate scientific knowledge
+- make code and data available and usable
+- help maintain historical records
 
 
 ## Existing solutions
 
-- Code Ocean
-- Brainlife
-- Whole Tale
+- [Code Ocean](https://codeocean.com/)
+- [Brainlife](https://brainlife.io/)
+- [Whole Tale](https://wholetale.org/)
 
 ---
 
-We need a framework that is **open, modular, and lightweight** to support existing (and new!) research workflows
+We need a framework that is **open, modular, and easy to maintain** to support the many existing (and new!) research workflows
 
 
 # Archival, reproducible, and transparent science (ARTS) Open Framework
@@ -89,7 +87,7 @@ We need a framework that is **open, modular, and lightweight** to support existi
 :::
 ::: {.column width="40%"}
 
-- define terms!
+- define terms for code *and* data!
 - copyright is default in most jurisdictions
 - great if you can open source
 
@@ -98,6 +96,8 @@ We need a framework that is **open, modular, and lightweight** to support existi
 
 
 ## Archives
+
+Archives should be *accessible, persistent, and trusted*
 
 ![Storage options [(CC BY-SA)](https://creativecommons.org/licenses/by-sa/4.0/)](figs/storage_options.svg)
 
@@ -137,7 +137,7 @@ We need a framework that is **open, modular, and lightweight** to support existi
 
 - standalone, executable packages that include everything needed to run an application
 - Containerfile vs. container image
-- podman, Docker, and Apptainer (formerly singularity) are popular container engines
+- podman, Docker, and Apptainer (formerly Singularity) are popular container engines
 - can be large (~1-10G) for research environments
 
 ## Provenance—Trusted Timestamping
@@ -180,7 +180,7 @@ We need a framework that is **open, modular, and lightweight** to support existi
 :::: {.columns}
 ::: {.column width="60%"}
 
-- record a watch movement with your laptop microphone
+- record the ticks from a mechanicalwatch movement with your laptop microphone
 - write some Python code to analyze it
 - archive your results, code, data, and environment
 
