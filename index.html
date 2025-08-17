@@ -9,7 +9,7 @@
 <link href="arts_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <meta name="author" content="Sabar Dasgupta">
+  <meta name="author" content="Sabar Dasgupta https://sabard.github.io/25_hope_arts_talk">
   <title>ARTS Open Framework</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,6 +30,7 @@
     }
   </style>
   <link rel="stylesheet" href="arts_files/libs/revealjs/dist/theme/quarto-d58ca6e55452da357bd4996cb6e3aa10.css">
+  <link rel="stylesheet" href="style.css">
   <link href="arts_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="arts_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="arts_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -126,151 +127,265 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" class="quarto-title-block">
   <h1 class="title">ARTS Open Framework</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Sabar Dasgupta 
+Sabar Dasgupta<br><a href="https://sabard.github.io/25_hope_arts_talk">https://sabard.github.io/25_hope_arts_talk</a> 
 </div>
 </div>
 </div>
 
 </section>
-<section id="background-5-min" class="slide level2">
-<h2>Background (5 min)</h2>
-<ul>
-<li>me</li>
-<li>ARTS paper</li>
-<li>communicating scientific knowledge</li>
-</ul>
-</section>
-<section id="reproducibility" class="slide level2">
-<h2>Reproducibility</h2>
-<ul>
-<li>reproducibility vs replicability</li>
-<li>regenerate and build off results decades into the future</li>
-</ul>
-</section>
-<section id="existing-methods-and-tools" class="slide level2">
-<h2>Existing methods and tools</h2>
-</section>
 <section>
-<section id="arts-open-framework-20-min" class="title-slide slide level1 center">
-<h1>ARTS Open Framework (20 min)</h1>
+<section id="background" class="title-slide slide level1">
+<h1>Background</h1>
+
+</section>
+<section id="about-me" class="slide level2">
+<h2>About me</h2>
+<ul>
+<li>second time at HOPE</li>
+<li>realtime audio processing with LiCoRICE workshop</li>
+<li>accessible and hybrid infrastructure tools</li>
+<li>lighting and batteries</li>
+<li>systems neuroscience</li>
+</ul>
+</section>
+<section id="problem-statement-todo" class="slide level2">
+<h2>Problem statement TODO</h2>
+<ul>
+<li>papers as the research output</li>
+<li>data accessibility</li>
+<li>reproducibility</li>
+<li>packaging research code</li>
+<li>sharing development environments</li>
+<li>rerun analyses decades into the future</li>
+</ul>
+</section>
+<section id="public-datasets" class="slide level2">
+<h2>Public datasets</h2>
+
+<img data-src="figs/noaa_removal.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://cgia.org/2025/04/upcoming-removal-of-noaa-datasets/">https://cgia.org/2025/04/upcoming-removal-of-noaa-datasets/</a></p></section>
+<section id="goal-todo" class="slide level2">
+<h2>Goal TODO</h2>
+<ul>
+<li>Communicate scientific knowledge</li>
+<li>code and data availability</li>
+<li>provenance (app deployments often do this already; already timestamped)</li>
+</ul>
+</section>
+<section id="existing-solutions" class="slide level2">
+<h2>Existing solutions</h2>
+<ul>
+<li>Code Ocean</li>
+<li>Brainlife</li>
+<li>Whole Tale</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>We need a framework that is <strong>open, modular, and lightweight</strong> to support existing (and new!) research workflows</p>
+</section></section>
+<section>
+<section id="archival-reproducible-and-transparent-science-arts-open-framework" class="title-slide slide level1">
+<h1>Archival, reproducible, and transparent science (ARTS) Open Framework</h1>
+
+<img data-src="figs/workflow.svg" class="r-stretch"></section>
+<section id="archival-reproducible-and-transparent-science-arts-open-framework-1" class="slide level2">
+<h2>Archival, reproducible, and transparent science (ARTS) Open Framework</h2>
 <ul>
 <li>Licensing</li>
 <li>Archives</li>
-<li>Software Version Control</li>
+<li>Version Control</li>
 <li>Containers</li>
-<li>Trusted Timestamping</li>
+<li>Provenance</li>
 <li>Documentation</li>
-<li>Configuration and File Structure</li>
+<li>Configuration</li>
 </ul>
 </section>
+<section id="arts-paper" class="slide level2">
+<h2>ARTS paper</h2>
+<p><a href="https://arxiv.org/abs/2504.08171">https://arxiv.org/abs/2504.08171</a></p>
+
+<img data-src="figs/arts_arxiv.png" class="r-stretch quarto-figure-center"><p class="caption">First version available on arxiv</p></section>
 <section id="licensing" class="slide level2">
 <h2>Licensing</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/licenses.svg"></p>
+<figcaption>Open source licenses <a href="https://creativecommons.org/licenses/by-sa/4.0/">(CC BY-SA)</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
 <ul>
-<li>open source great, but not necessary</li>
-<li>what is most necessary# is that terms are defined</li>
+<li>define terms!</li>
+<li>copyright is default in most jurisdictions</li>
+<li>great if you can open source</li>
 </ul>
+</div></div>
 </section>
 <section id="archives" class="slide level2">
 <h2>Archives</h2>
-<ul>
-<li>archives must be trusted, persistent, and ?</li>
-<li>if they can’t well meet these criteria (and pretty much all do not!):
-<ul>
-<li>archives must either be decentralized with a well-documented</li>
-</ul></li>
-<li>if deposition process is automated, can upload to multiple archives</li>
-<li>code ocean case study?</li>
-</ul>
-</section>
+
+<!--
+- archives must be trusted, persistent, and ?
+- if they can't well meet these criteria (and pretty much all do not!):
+    - archives must either be decentralized with a well-documented
+- if deposition process is automated, can upload to multiple archives 
+- code ocean case study?
+-->
+<img data-src="figs/storage_options.svg" class="r-stretch quarto-figure-center"><p class="caption">Storage options <a href="https://creativecommons.org/licenses/by-sa/4.0/">(CC BY-SA)</a></p></section>
 <section id="software-version-control" class="slide level2">
 <h2>Software Version Control</h2>
 <ul>
-<li>imperative! gives a historical record</li>
-<li>merge over rebase</li>
-<li></li>
+<li>create historical record of research performed</li>
+<li>merge over rebase to preserve the record</li>
+<li>supports multiple repositories</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/git_icon.svg" class="relative" height="200"></p>
+<figcaption>Git <a href="https://creativecommons.org/licenses/by/3.0/">(CC BY)</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/mercurial_icon.svg" class="relative" height="200"></p>
+<figcaption>Mercurial <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">(GPLv2)</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/svn_icon.svg" class="relative" height="200"></p>
+<figcaption>Subversion <a href="https://www.apache.org/licenses/LICENSE-2.0">(Apache 2.0)</a></figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="containers" class="slide level2">
 <h2>Containers</h2>
 <ul>
-<li>this is the big idea we’re pushing. will come back to this one</li>
+<li>standalone, executable packages that include everything needed to run an application</li>
+<li>Containerfile vs.&nbsp;container image</li>
+<li>podman, Docker, and Apptainer (formerly singularity) are popular container engines</li>
+<li>can be large (~1-10G) for research environments</li>
 </ul>
 </section>
-<section id="trusted-timestamping" class="slide level2">
-<h2>Trusted Timestamping</h2>
+<section id="provenancetrusted-timestamping" class="slide level2">
+<h2>Provenance—Trusted Timestamping</h2>
 <ul>
-<li>interesting in its own right</li>
-<li>verifiable electronic lab notebook</li>
+<li>Github link: <a href="https://github.com/bil/timestamping">https://github.com/bil/timestamping</a></li>
+<li><a href="https://www.ietf.org/rfc/rfc3161.txt">RFC 3161</a></li>
+<li>data hash signed by multiple timestamp authorities</li>
+<li>provides a verifiable electronic lab notebook when used with version control</li>
 </ul>
-</section>
+
+<img data-src="figs/timestamp.png" class="r-stretch quarto-figure-center"><p class="caption">Trusted timestamping</p></section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
 <ul>
-<li>arguably the most important part of any depositoin</li>
-<li>should exist at multiple levels</li>
-<li>but most important is setup, run, modify</li>
+<li>arguably the most important part of any deposition</li>
+<li>ideally should exist at multiple levels</li>
+<li>most important is setup, run, and usage instructions</li>
 </ul>
 </section>
 <section id="configuration-and-file-structure" class="slide level2">
 <h2>Configuration and File Structure</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
-<li>ARTS intentionally not very opinionated</li>
-<li>only dictates the presense of a single file that should be able to be added to existing archives</li>
-<li>this file dictates how to interpret the deposition</li>
+<li>ARTS is intentionally unopinionated</li>
+<li>requires the presense of a <code>config.env</code> file that</li>
+<li>dictates how to interpret the deposition</li>
 </ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/file_structure_minimal.png"></p>
+<figcaption>File structure <a href="https://creativecommons.org/licenses/by-sa/4.0/">(CC BY-SA)</a></figcaption>
+</figure>
+</div>
+</div></div>
 </section></section>
 <section>
-<section id="example-deposition" class="title-slide slide level1 center">
-<h1>Example deposition</h1>
-
-</section>
-<section id="watch-calibration" class="slide level2">
-<h2>Watch Calibration</h2>
+<section id="example-deposition-watch-calibration" class="title-slide slide level1">
+<h1>Example deposition: Watch Calibration</h1>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
-<li>record a watch movement with your laptop</li>
+<li>record a watch movement with your laptop microphone</li>
 <li>write some Python code to analyze it</li>
-<li>how to share your findings?</li>
+<li>archive your results, code, data, and environment</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/watch_movement.png"></p>
+<figcaption><a href="https://commons.wikimedia.org/wiki/File:Watch_movement.png">Watch movement</a></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="outputsjupyter-notebook" class="slide level2">
+<h2>Outputs—Jupyter notebook</h2>
+
+<img data-src="figs/watch_calibration.png" class="r-stretch quarto-figure-center"><p class="caption">Notebook running in container</p></section>
+<section id="deposition-availability" class="slide level2">
+<h2>Deposition availability</h2>
+<ul>
+<li>Licenses: GPLv3 and CC BY-SA 4.0</li>
+<li>Version control system: git</li>
+<li>Archives: SDR (<a href="https://doi.org/10.25740/vs897sz1847">https://doi.org/10.25740/vs897sz1847</a>) and Zenodo (<a href="https://zenodo.org/records/15232081">https://zenodo.org/records/15232081</a>)</li>
 </ul>
 </section>
-<section id="containers-again" class="slide level2">
-<h2>Containers again</h2>
+<section id="containerfile" class="slide level2">
+<h2>Containerfile</h2>
+
+<img data-src="figs/containerfile.png" class="r-stretch"></section>
+<section id="data-provenance" class="slide level2">
+<h2>Data provenance</h2>
+
+<img data-src="figs/provenance.png" class="r-stretch"></section>
+<section id="readme" class="slide level2">
+<h2>README</h2>
+<div class="center-xy">
+<p><img data-src="figs/watch_calibration_readme.png" height="550"></p>
+</div>
 </section>
+<section id="config.env" class="slide level2">
+<h2>config.env</h2>
+
+<img data-src="figs/config.png" class="r-stretch"></section>
 <section id="mybinder" class="slide level2">
 <h2>MyBinder</h2>
+<p><a href="https://gesis.mybinder.org/v2/gh/bil/watch-calibration/binder?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2FWatch+Calibration.ipynb">MyBinder demo link</a></p>
+<p>https://tinyurl.com/yck4r5xe</p>
 </section>
 <section id="gcp" class="slide level2">
 <h2>GCP (?)</h2>
 </section></section>
-<section>
-<section id="recommendations-5-min" class="title-slide slide level1 center">
-<h1>Recommendations (5 min)</h1>
-
-</section>
-<section id="for-the-hope-audience" class="slide level2">
-<h2>For the HOPE audience</h2>
-<ul>
-<li>should I make assumptions about the audience?</li>
-<li>could maybe skip most of this section</li>
-</ul>
-</section></section>
-<section id="applications-to-other-fields-10-min" class="title-slide slide level1 center">
-<h1>Applications to other fields (10 min)</h1>
+<section id="applications-to-other-fields" class="title-slide slide level1">
+<h1>Applications to other fields</h1>
 <ul>
 <li>climate databases (NOAA funding, etc.)</li>
 <li>astrophysics</li>
 <li>computational biology</li>
+<li>imagine if reporters could use this based off a public dataset</li>
 <li>others?</li>
 </ul>
 </section>
 
-<section id="questions-10-min" class="title-slide slide level1 center">
-<h1>Questions (10 min)</h1>
+<section id="questions" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Questions?</h1>
 
 </section>
     </div>

@@ -1,0 +1,14 @@
+figcaption {
+   text-align: center;
+}
+
+.caption {
+   text-align: center
+}
+
+.center-xy {
+   /*text-align: center;*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

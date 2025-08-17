@@ -1,100 +1,232 @@
 ---
 title: ARTS Open Framework
-author: Sabar Dasgupta
+author: "Sabar Dasgupta<br>[https://sabard.github.io/25_hope_arts_talk](https://sabard.github.io/25_hope_arts_talk)"
+center-title-slide: false
 format: 
+  html:
+    css: style.css
   revealjs:
     theme: solarized
     navigation-mode: vertical
+    css: style.css
+
 ---
 
-## Background (5 min)
-- me
-- ARTS paper
-- communicating scientific knowledge
 
-## Reproducibility
+# Background
 
-- reproducibility vs replicability
-- regenerate and build off results decades into the future
+## About me
 
-## Existing methods and tools
+- second time at HOPE
+- realtime audio processing with LiCoRICE workshop
+- accessible and hybrid infrastructure tools
+- lighting and batteries
+- systems neuroscience
 
-# ARTS Open Framework (20 min)
+
+## Problem statement
+
+- papers as the research output
+- data accessibility
+- reproducibility
+- packaging research code
+- sharing development environments
+- rerun analyses decades into the future
+
+
+## Public datasets
+
+![[https://cgia.org/2025/04/upcoming-removal-of-noaa-datasets/](https://cgia.org/2025/04/upcoming-removal-of-noaa-datasets/)](figs/noaa_removal.png)
+
+
+## Goal
+
+- Communicate scientific knowledge
+- code and data availability
+- provenance (app deployments often do this already; already timestamped)
+
+
+## Existing solutions
+
+- Code Ocean
+- Brainlife
+- Whole Tale
+
+---
+
+We need a framework that is **open, modular, and lightweight** to support existing (and new!) research workflows
+
+
+# Archival, reproducible, and transparent science (ARTS) Open Framework
+
+![](figs/workflow.svg)
+
+## Archival, reproducible, and transparent science (ARTS) Open Framework
 
 - Licensing
 - Archives
-- Software Version Control
-- Containers 
-- Trusted Timestamping
+- Version Control
+- Containers
+- Provenance
 - Documentation
-- Configuration and File Structure
+- Configuration
+
+
+## ARTS paper
+
+[https://arxiv.org/abs/2504.08171](https://arxiv.org/abs/2504.08171)
+
+![First version available on arxiv](figs/arts_arxiv.png){}
+
 
 ## Licensing
 
-- open source great, but not necessary
-- what is most necessary#  is that terms are defined
+:::: {.columns}
+::: {.column width="60%"}
+
+![Open source licenses [(CC BY-SA)](https://creativecommons.org/licenses/by-sa/4.0/)](figs/licenses.svg)
+
+:::
+::: {.column width="40%"}
+
+- define terms!
+- copyright is default in most jurisdictions
+- great if you can open source
+
+:::
+::::
+
 
 ## Archives
 
+![Storage options [(CC BY-SA)](https://creativecommons.org/licenses/by-sa/4.0/)](figs/storage_options.svg)
+
+<!--
 - archives must be trusted, persistent, and ?
 - if they can't well meet these criteria (and pretty much all do not!):
 	- archives must either be decentralized with a well-documented
 - if deposition process is automated, can upload to multiple archives 
 - code ocean case study?
+-->
 
 ## Software Version Control
 
-- imperative! gives a historical record
-- merge over rebase
-- 
+- create historical record of research performed
+- merge over rebase to preserve the record
+- supports multiple repositories
+
+:::: {.columns}
+::: {.column width="33%"}
+
+![Git [(CC BY)](https://creativecommons.org/licenses/by/3.0/)](figs/git_icon.svg){.relative height=200}
+
+:::
+::: {.column width="33%"}
+
+![Mercurial [(GPLv2)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)](figs/mercurial_icon.svg){.relative height=200}
+
+:::
+::: {.column width="33%"}
+
+![Subversion [(Apache 2.0)](https://www.apache.org/licenses/LICENSE-2.0)](figs/svn_icon.svg){.relative height=200}
+
+:::
+::::
 
 ## Containers 
 
-- this is the big idea we're pushing. will come back to this one
+- standalone, executable packages that include everything needed to run an application
+- Containerfile vs. container image
+- podman, Docker, and Apptainer (formerly singularity) are popular container engines
+- can be large (~1-10G) for research environments
 
-## Trusted Timestamping
+## Provenance—Trusted Timestamping
 
-- interesting in its own right
-- verifiable electronic lab notebook
+- Github link: [https://github.com/bil/timestamping](https://github.com/bil/timestamping)
+- [RFC 3161](https://www.ietf.org/rfc/rfc3161.txt)
+- data hash signed by multiple timestamp authorities
+- provides a verifiable electronic lab notebook when used with version control
+
+![Trusted timestamping](figs/timestamp.png)
+
 
 ## Documentation
 
-- arguably the most important part of any depositoin
-- should exist at multiple levels
-- but most important is setup, run, modify
+- arguably the most important part of any deposition
+- ideally should exist at multiple levels
+- most important is setup, run, and usage instructions
+
 
 ## Configuration and File Structure
 
-- ARTS intentionally not very opinionated
-- only dictates the presense of a single file that should be able to be added to existing archives
-- this file dictates how to interpret the deposition
+:::: {.columns}
+::: {.column width="60%"}
 
-# Example deposition
+- ARTS is intentionally unopinionated
+- requires the presense of a `config.env` file that
+- dictates how to interpret the deposition
 
-## Watch Calibration
+:::
+::: {.column width="40%"}
 
-- record a watch movement with your laptop
+![File structure [(CC BY-SA)](https://creativecommons.org/licenses/by-sa/4.0/)](figs/file_structure_minimal.png){}
+
+:::
+::::
+
+
+# Example deposition: Watch Calibration
+
+:::: {.columns}
+::: {.column width="60%"}
+
+- record a watch movement with your laptop microphone
 - write some Python code to analyze it
-- how to share your findings?
+- archive your results, code, data, and environment
 
-## Containers again
+:::
+::: {.column width="40%"}
+
+![[Watch movement](https://commons.wikimedia.org/wiki/File:Watch_movement.png)](figs/watch_movement.png){}
+
+:::
+::::
+
+## Outputs—Jupyter notebook
+
+![Notebook running in container](figs/watch_calibration.png)
+
+## Deposition availability
+
+- Licenses: GPLv3 and CC BY-SA 4.0
+- Version control system: git
+- Archives: SDR ([https://doi.org/10.25740/vs897sz1847](https://doi.org/10.25740/vs897sz1847)) and Zenodo ([https://zenodo.org/records/15232081](https://zenodo.org/records/15232081))
+
+## Containerfile
+
+![](figs/containerfile.png)
+
+## Data provenance
+
+![](figs/provenance.png)
+
+
+## README
+
+::: {.center-xy}
+![](figs/watch_calibration_readme.png){height=550}
+:::
+
+## config.env
+
+![](figs/config.png)
+
 
 ## MyBinder
 
-## GCP (?)
+[MyBinder demo link](https://gesis.mybinder.org/v2/gh/bil/watch-calibration/binder?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2FWatch+Calibration.ipynb)
 
-# Recommendations (5 min)
+https://tinyurl.com/yck4r5xe
 
-## For the HOPE audience
 
-- should I make assumptions about the audience?
-- could maybe skip most of this section
-
-# Applications to other fields (10 min)
-
-- climate databases (NOAA funding, etc.)
-- astrophysics
-- computational biology
-- others?
-
-# Questions (10 min)
+# Questions? {.center style="text-align: center;"}
