@@ -1,6 +1,6 @@
 ---
 title: ARTS Open Framework
-author: "Sabar Dasgupta<br>[https://sabard.github.io/25_hope_arts_talk](https://sabard.github.io/25_hope_arts_talk)"
+author: "Sabar Dasgupta<br>s@bardasgupta.com<br>[https://sabard.github.io/25_hope_arts_talk](https://sabard.github.io/25_hope_arts_talk)"
 center-title-slide: false
 format: 
   html:
