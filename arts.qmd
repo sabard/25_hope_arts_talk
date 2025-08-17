@@ -163,7 +163,7 @@ Archives should be *accessible, persistent, and trusted*
 ::: {.column width="60%"}
 
 - ARTS is intentionally unopinionated
-- requires the presence of a `config.env` file that
+- requires the presence of a `config.env` file
 - dictates how to interpret the deposition
 
 :::
